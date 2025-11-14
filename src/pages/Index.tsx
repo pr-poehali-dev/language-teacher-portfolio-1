@@ -41,14 +41,11 @@ export default function Index() {
             <div className="order-1 md:order-2 flex justify-center animate-scale-in">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl"></div>
-                <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-md p-8 flex items-center justify-center border-4 border-primary/10">
-                  <div className="text-center space-y-4">
-                    <div className="bg-primary/10 w-48 h-48 rounded-full mx-auto flex items-center justify-center">
-                      <Icon name="User" size={80} className="text-primary" />
-                    </div>
-                    <p className="text-muted-foreground text-sm">Место для фотографии</p>
-                  </div>
-                </div>
+                <img 
+                  src="https://cdn.poehali.dev/files/164882c1-7de2-4846-9c1e-5c164355edb6.jpg"
+                  alt="Емельянова Таисья"
+                  className="relative rounded-3xl shadow-2xl w-full max-w-md object-cover h-[500px]"
+                />
               </div>
             </div>
           </div>
