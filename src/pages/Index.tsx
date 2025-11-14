@@ -4,8 +4,16 @@ import Icon from "@/components/ui/icon";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-secondary/30">
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-secondary/20 py-20">
+    <div className="min-h-screen bg-gradient-to-b from-white to-secondary/30 relative overflow-hidden">
+      <div className="fixed inset-0 pointer-events-none opacity-10 z-0">
+        <img src="https://cdn.poehali.dev/files/da38c535-8b5e-4505-903c-36837be3ed47.jpg" alt="" className="absolute top-10 left-10 w-32 h-32 object-contain" />
+        <img src="https://cdn.poehali.dev/files/da38c535-8b5e-4505-903c-36837be3ed47.jpg" alt="" className="absolute top-40 right-20 w-40 h-40 object-contain" />
+        <img src="https://cdn.poehali.dev/files/da38c535-8b5e-4505-903c-36837be3ed47.jpg" alt="" className="absolute top-96 left-1/4 w-28 h-28 object-contain" />
+        <img src="https://cdn.poehali.dev/files/da38c535-8b5e-4505-903c-36837be3ed47.jpg" alt="" className="absolute bottom-40 right-1/4 w-36 h-36 object-contain" />
+        <img src="https://cdn.poehali.dev/files/da38c535-8b5e-4505-903c-36837be3ed47.jpg" alt="" className="absolute bottom-96 left-20 w-32 h-32 object-contain" />
+        <img src="https://cdn.poehali.dev/files/da38c535-8b5e-4505-903c-36837be3ed47.jpg" alt="" className="absolute top-1/2 right-10 w-28 h-28 object-contain" />
+      </div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-secondary/20 py-20 z-10">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 space-y-6 animate-fade-in">
@@ -33,11 +41,14 @@ export default function Index() {
             <div className="order-1 md:order-2 flex justify-center animate-scale-in">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl"></div>
-                <img 
-                  src="https://cdn.poehali.dev/files/f8d2c50e-8110-4c16-a911-8c2fd2ec25b0.png"
-                  alt="Емельянова Таисья"
-                  className="relative rounded-3xl shadow-2xl w-full max-w-md object-cover"
-                />
+                <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-md p-8 flex items-center justify-center border-4 border-primary/10">
+                  <div className="text-center space-y-4">
+                    <div className="bg-primary/10 w-48 h-48 rounded-full mx-auto flex items-center justify-center">
+                      <Icon name="User" size={80} className="text-primary" />
+                    </div>
+                    <p className="text-muted-foreground text-sm">Место для фотографии</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -144,7 +155,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-16 container mx-auto px-4 max-w-6xl">
+      <section className="py-16 container mx-auto px-4 max-w-6xl relative z-10">
         <h2 className="text-4xl font-bold mb-12 text-center text-foreground">
           Опыт работы
         </h2>
@@ -193,7 +204,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-16 bg-secondary/30">
+      <section className="py-16 bg-secondary/30 relative z-10">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-4xl font-bold mb-12 text-center text-foreground">
             Профессиональные навыки
@@ -261,27 +272,39 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-16 container mx-auto px-4 max-w-6xl">
+      <section className="py-16 container mx-auto px-4 max-w-6xl relative z-10">
         <Card className="border-2 border-primary shadow-xl bg-gradient-to-br from-primary/5 to-white">
-          <CardContent className="p-12 text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-primary/10 p-4 rounded-2xl">
-                <img 
-                  src="https://cdn.poehali.dev/files/f383250a-8ff0-4d12-9469-77ffacb34bed.png"
-                  alt="QR код для связи"
-                  className="w-48 h-48 object-contain"
-                />
+          <CardContent className="p-12">
+            <h2 className="text-3xl font-bold mb-8 text-center text-foreground">Свяжитесь со мной</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+              <div className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-primary/10 shadow-md hover:shadow-lg transition-shadow">
+                <div className="bg-primary/10 p-4 rounded-xl">
+                  <Icon name="Mail" size={32} className="text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground font-medium mb-1">Email</p>
+                  <a href="mailto:Tasyaemel@gmail.ru" className="text-lg font-semibold text-primary hover:underline">
+                    Tasyaemel@gmail.ru
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 p-6 bg-white rounded-2xl border border-primary/10 shadow-md hover:shadow-lg transition-shadow">
+                <div className="bg-primary/10 p-4 rounded-xl">
+                  <Icon name="Phone" size={32} className="text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground font-medium mb-1">Телефон</p>
+                  <a href="tel:+79210506789" className="text-lg font-semibold text-primary hover:underline">
+                    +7 921 050-67-89
+                  </a>
+                </div>
               </div>
             </div>
-            <h2 className="text-3xl font-bold mb-4 text-foreground">Свяжитесь со мной</h2>
-            <p className="text-lg text-muted-foreground">
-              Отсканируйте QR-код или свяжитесь удобным способом
-            </p>
           </CardContent>
         </Card>
       </section>
 
-      <footer className="bg-primary/5 py-8 mt-16">
+      <footer className="bg-primary/5 py-8 mt-16 relative z-10">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
             © 2024 Емельянова Таисья. Преподаватель английского и немецкого языков
